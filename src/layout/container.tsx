@@ -2,7 +2,7 @@ import React from "react";
 
 import MUIContainer from "@mui/material/Container";
 
-import { WrapErrorBoundary } from "common";
+import { WrapErrorBoundary } from "./wrapErrorBoundary";
 
 export type ContainerProps = {
   children: React.ReactNode;

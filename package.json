@@ -2,8 +2,22 @@
   "name": "@dashotv/components",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build": "bun build src/index.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/testing-library": "^0.2.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -15,6 +29,10 @@
     "@fontsource/roboto": "^5.0.12",
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
+    "@storybook/addon-themes": "^7.6.16",
+    "@storybook/react": "^7.6.16",
+    "@storybook/react-vite": "^7.6.16",
+    "@types/mime": "^4.0.0",
     "axios": "^1.6.8",
     "dayjs": "^1.11.10",
     "nats.ws": "^1.22.0",
@@ -24,8 +42,10 @@
     "react-icons": "^5.0.1",
     "react-image": "^4.1.0",
     "react-loader-spinner": "^6.1.6",
+    "react-router-dom": "^6.22.3",
     "react-truncate-inside": "^1.0.3",
     "react-visibility-sensor": "^5.1.1",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "storybook": "^7.6.16"
   }
 }

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import { LoadingIndicator } from './LoadingIndicator';
+import { LoadingIndicator } from "./loadingIndicator";
 
 const meta: Meta<typeof LoadingIndicator> = {
   component: LoadingIndicator,

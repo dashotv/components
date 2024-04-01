@@ -5,7 +5,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ButtonMap } from "./ButtonMap";
+import { ButtonMap } from "./buttonMap";
 
 const meta: Meta<typeof ButtonMap> = {
   component: ButtonMap,
