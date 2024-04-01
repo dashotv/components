@@ -1,13 +1,11 @@
-import React from 'react';
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
 
-import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
-
-import { Pill } from '.';
+import { Pill } from ".";
 
 export type ResolutionProps = {
   resolution: string | number | undefined;
-  variant?: 'default' | 'chip' | 'pill';
+  variant?: "default" | "chip" | "pill";
 };
 export const Resolution = ({ resolution, variant }: ResolutionProps) => {
   if (!resolution) {
@@ -15,9 +13,9 @@ export const Resolution = ({ resolution, variant }: ResolutionProps) => {
   }
 
   switch (variant) {
-    case 'chip':
+    case "chip":
       return <Chip label={resolution} size="small" color="primary" />;
-    case 'pill':
+    case "pill":
       return <Pill name="R" value={resolution} color="primary.dark" />;
     default:
       return (
@@ -27,18 +25,32 @@ export const Resolution = ({ resolution, variant }: ResolutionProps) => {
       );
   }
 };
-export const ResolutionTitle = ({ title, variant }: { title: string; variant?: 'default' | 'chip' | 'pill' }) => {
+export const ResolutionTitle = ({
+  title,
+  variant,
+}: {
+  title: string;
+  variant?: "default" | "chip" | "pill";
+}) => {
   if (!title) {
     return;
   }
-  if (title.includes('2160') || title.includes('2160p') || title.includes('4k')) {
+  if (
+    title.includes("2160") ||
+    title.includes("2160p") ||
+    title.includes("4k")
+  ) {
     return <Resolution resolution={2160} variant={variant} />;
   }
-  if (title.includes('1080') || title.includes('1080p') || title.includes('2k')) {
+  if (
+    title.includes("1080") ||
+    title.includes("1080p") ||
+    title.includes("2k")
+  ) {
     return <Resolution resolution={1080} variant={variant} />;
   }
-  if (title.includes('720') || title.includes('720p')) {
+  if (title.includes("720") || title.includes("720p")) {
     return <Resolution resolution={720} variant={variant} />;
   }
-  return '';
+  return "";
 };

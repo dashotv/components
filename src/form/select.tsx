@@ -1,18 +1,27 @@
-import React from 'react';
-import { Controller } from 'react-hook-form';
+import React from "react";
+import { Controller } from "react-hook-form";
 
-import { title } from 'radash';
+import { title } from "radash";
 
-import MenuItem from '@mui/material/MenuItem';
-import TextField from '@mui/material/TextField';
+import MenuItem from "@mui/material/MenuItem";
+import TextField from "@mui/material/TextField";
 
-import { InputProps, Option } from './types';
+import { InputProps, Option } from "./types";
 
 export interface SelectProps {
   options: Option[];
   render?: (option: Option) => React.ReactNode;
 }
-export const Select = ({ name, label, disabled, options, control, sx, render, onChange }: InputProps & SelectProps) => {
+export const Select = ({
+  name,
+  label,
+  disabled,
+  options,
+  control,
+  sx,
+  render,
+  onChange,
+}: InputProps & SelectProps) => {
   const renderDefault = (option: Option) => (
     <MenuItem key={option.value} value={option.value}>
       <span>{render ? render(option) : option.label}</span>
@@ -32,7 +41,7 @@ export const Select = ({ name, label, disabled, options, control, sx, render, on
           label={title(label || name)}
           variant="standard"
           fullWidth
-          onChange={e => {
+          onChange={(e) => {
             onChange && onChange(e);
             field.onChange(e);
           }}

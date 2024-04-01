@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Checkbox, MenuItem, TextField } from '@mui/material';
+import { Checkbox, MenuItem, TextField } from "@mui/material";
 
 export interface Choice {
   name: string;
@@ -18,7 +16,7 @@ export const FilterSelect = ({
   choices: Choice[];
   choose: (choice: string) => void;
 }) => {
-  const handleChange = event => {
+  const handleChange = (event) => {
     choose(event.target.value);
   };
   return (
@@ -52,8 +50,15 @@ export const FilterCheckbox = ({
   checkedIcon: React.ReactNode;
   change: (checked: boolean) => void;
 }) => {
-  const handleChange = event => {
+  const handleChange = (event) => {
     change(event.target.checked);
   };
-  return <Checkbox checked={checked} icon={icon} checkedIcon={checkedIcon} onChange={handleChange} />;
+  return (
+    <Checkbox
+      checked={checked}
+      icon={icon}
+      checkedIcon={checkedIcon}
+      onChange={handleChange}
+    />
+  );
 };

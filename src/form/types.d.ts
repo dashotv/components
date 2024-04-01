@@ -1,7 +1,7 @@
-import React from 'react';
-import { Control } from 'react-hook-form';
+import React from "react";
+import { Control } from "react-hook-form";
 
-import { SxProps } from '@mui/system';
+import { SxProps } from "@mui/system";
 
 export interface InputProps {
   name: string;
@@ -10,7 +10,9 @@ export interface InputProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<any>;
   sx?: SxProps;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange?: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
 }
 
 interface Option {

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Controller } from 'react-hook-form';
+import React from "react";
+import { Controller } from "react-hook-form";
 
-import { title } from 'radash';
+import { title } from "radash";
 
-import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
-import MUICheckbox from '@mui/material/Checkbox';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+import MUICheckbox from "@mui/material/Checkbox";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
-import { InputProps } from './types';
+import { InputProps } from "./types";
 
 export interface IconCheckboxProps {
   icon: React.ReactNode;
@@ -43,7 +43,7 @@ export const IconCheckbox = ({
                 checkedIcon={checkedIcon}
                 checked={field.value}
                 id={name}
-                onChange={e => {
+                onChange={(e) => {
                   field.onChange(e);
                   onChange && onChange(e);
                 }}
@@ -58,7 +58,14 @@ export const IconCheckbox = ({
   );
 };
 
-export const Checkbox = ({ name, label, disabled, control, sx, onChange }: InputProps) => {
+export const Checkbox = ({
+  name,
+  label,
+  disabled,
+  control,
+  sx,
+  onChange,
+}: InputProps) => {
   //   error={!!errors[name]}
   //   helperText={errors[name]?.message}
   return (

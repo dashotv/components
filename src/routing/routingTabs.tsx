@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Route, Routes, matchPath, useLocation } from "react-router-dom";
 
 import Box from "@mui/material/Box";
@@ -6,7 +5,7 @@ import Paper from "@mui/material/Paper";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 
-import { WrapErrorBoundary } from "common";
+import { WrapErrorBoundary } from "#common";
 
 export interface RoutingTabsRoute {
   label: string;

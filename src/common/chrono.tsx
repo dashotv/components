@@ -1,9 +1,7 @@
-import React from 'react';
-
-import dayjs from 'dayjs';
-import relativeTime from 'dayjs/plugin/relativeTime';
-import utc from 'dayjs/plugin/utc';
-import weekday from 'dayjs/plugin/weekday';
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import utc from "dayjs/plugin/utc";
+import weekday from "dayjs/plugin/weekday";
 
 dayjs.extend(relativeTime);
 dayjs.extend(utc);
@@ -16,27 +14,33 @@ interface DateProps {
   children?: string;
   stamp?: string;
 }
-export function Chrono({ fromNow, format = 'YYYY-MM-DD', special, stamp, children }: DateProps) {
+export function Chrono({
+  fromNow,
+  format = "YYYY-MM-DD",
+  special,
+  stamp,
+  children,
+}: DateProps) {
   const raw = dayjs(stamp || children).utc();
 
   const process = () => {
     if (special !== undefined || special) {
-      const today = dayjs().startOf('day').utc();
-      const diff = raw.diff(today, 'days', true);
+      const today = dayjs().startOf("day").utc();
+      const diff = raw.diff(today, "days", true);
       // console.log('today: ', today.toString(), 'raw: ', raw.toString(), 'diff: ', diff);
       if (diff > -2 && diff <= -1) {
-        return 'Yesterday';
+        return "Yesterday";
       }
       if (diff > -1 && diff <= 0) {
-        return 'Today';
+        return "Today";
       }
       if (diff > 0 && diff <= 1) {
-        return 'Tomorrow';
+        return "Tomorrow";
       }
       if (diff > 1 && diff <= 7) {
         return dayjs()
           .weekday(today.weekday() + diff)
-          .format('dddd');
+          .format("dddd");
       }
       return raw.format(format);
     }

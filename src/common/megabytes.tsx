@@ -1,13 +1,17 @@
-import React from 'react';
+import Typography from "@mui/material/Typography";
 
-import Typography from '@mui/material/Typography';
-
-export const Megabytes = ({ value, ord }: { value: number; ord: 'bytes' | 'kilobytes' | 'megabytes' }) => {
+export const Megabytes = ({
+  value,
+  ord,
+}: {
+  value: number;
+  ord: "bytes" | "kilobytes" | "megabytes";
+}) => {
   const getOutput = (v: number) => {
     switch (ord) {
-      case 'bytes':
+      case "bytes":
         return v / (1024 * 1024);
-      case 'kilobytes':
+      case "kilobytes":
         return v / 1024;
       default:
         return v;
@@ -15,7 +19,11 @@ export const Megabytes = ({ value, ord }: { value: number; ord: 'bytes' | 'kilob
   };
 
   return (
-    <Typography variant="subtitle2" color="textSecondary" title={`${value} ${ord}`}>
+    <Typography
+      variant="subtitle2"
+      color="textSecondary"
+      title={`${value} ${ord}`}
+    >
       {getOutput(value).toFixed(2)}mb
     </Typography>
   );
