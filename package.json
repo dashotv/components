@@ -9,7 +9,6 @@
     "build-storybook": "storybook build"
   },
   "np": {
-    "publish": false,
     "tests": false
   },
   "devDependencies": {
