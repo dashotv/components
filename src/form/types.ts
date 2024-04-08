@@ -1,4 +1,3 @@
-import React from "react";
 import { Control } from "react-hook-form";
 
 import { SxProps } from "@mui/system";
@@ -15,7 +14,7 @@ export interface InputProps {
   ) => void;
 }
 
-interface Option {
+export interface Option {
   value: string | number;
   label: string | number | React.ReactElement;
 }
