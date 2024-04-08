@@ -8,23 +8,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "exports": {
-    ".": {
-      "import": "./src/index.ts"
-    },
-    "./common": {
-      "import": "./src/common/index.ts"
-    },
-    "./form": {
-      "import": "./src/form/index.ts"
-    },
-    "./layout": {
-      "import": "./src/layout/index.ts"
-    },
-    "./routing": {
-      "import": "./src/routing/index.ts"
-    }
-  },
   "devDependencies": {
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
