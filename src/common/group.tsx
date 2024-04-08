@@ -1,7 +1,7 @@
 import Chip from "@mui/material/Chip";
 import Typography from "@mui/material/Typography";
 
-import { Pill } from ".";
+import { Pill } from "./pill";
 
 export type GroupProps = {
   group: string | undefined;

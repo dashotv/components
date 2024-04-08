@@ -1,6 +1,6 @@
 import Typography from "@mui/material/Typography";
 
-import { Chrono } from "#common";
+import { Chrono } from "./chrono";
 
 export const Published = ({ date }: { date: string }) => {
   const never =

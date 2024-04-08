@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 
-import { WrapErrorBoundary } from "#common";
+import { WrapErrorBoundary } from "common";
 
-import { TabPanel } from ".";
+import { TabPanel } from "./panel";
 
 export interface MediumTabMap {
   [key: string]: JSX.Element;

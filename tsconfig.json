@@ -24,5 +24,8 @@
     // dashotv
     "noImplicitAny": false,
     "baseUrl": "./src"
-  }
+  },
+  "include": [
+    "./src"
+  ],
 }
