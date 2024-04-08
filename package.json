@@ -1,12 +1,16 @@
 {
   "name": "@dashotv/components",
   "main": "lib/index.js",
-  "module": "lib/index.js",
-  "type": "module",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "np": {
+    "publish": false,
+    "tests": false
   },
   "devDependencies": {
     "@mui/icons-material": "^5.15.14",
