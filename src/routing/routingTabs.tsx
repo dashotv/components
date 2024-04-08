@@ -14,14 +14,15 @@ export interface RoutingTabsRoute {
 }
 export const RoutingTabs = ({
   data,
-  route,
+  mount,
 }: {
   data: RoutingTabsRoute[];
-  route: string;
+  mount: string;
 }) => {
-  const routes = data.map(({ to }) => (to !== "" ? `${route}/${to}` : route));
-  const routeMatch = useRouteMatch(routes);
-  const currentTab = routeMatch;
+  const currentTab = useRouteMatch(
+    mount,
+    data.map(({ to }) => to)
+  );
 
   return (
     <>
@@ -68,11 +69,11 @@ export function RoutingTab({ key, index, to, label }: RoutingTabProps) {
   );
 }
 
-function useRouteMatch(patterns: readonly string[]) {
+function useRouteMatch(mount: string, patterns: readonly string[]) {
   const { pathname } = useLocation();
 
   for (let i = 0; i < patterns.length; i += 1) {
-    if (matchPath(patterns[i], pathname) !== null) {
+    if (matchPath(`${mount}/${patterns[i]}`, pathname) !== null) {
       return i;
     }
   }
