@@ -11,7 +11,8 @@
   "scripts": {
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "patch": "npm run build && npm version patch && npm publish"
   },
   "np": {
     "tests": false
