@@ -20,7 +20,6 @@ export const RoutingTabs = ({
   data: RoutingTabsRoute[];
   mount: string;
 }) => {
-  console.log("RoutingTabs: ", data, mount);
   const currentTab = useRouteMatch(
     mount,
     data.map(({ path, to }) => path || to)
@@ -72,12 +71,10 @@ export function RoutingTab({ key, index, to, label }: RoutingTabProps) {
 }
 
 function useRouteMatch(mount: string, patterns: readonly string[]) {
-  console.log("useRouteMatch: ", mount, patterns);
   const { pathname } = useLocation();
 
   for (let i = 0; i < patterns.length; i += 1) {
     const m = matchPath(`${mount}/${patterns[i]}`, pathname);
-    console.log("useRouteMatch: ", m, `${mount}/${patterns[i]}`, pathname);
     if (m !== null) {
       return i;
     }
