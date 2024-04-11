@@ -11,6 +11,7 @@ export interface RoutingTabsRoute {
   label: string;
   element: JSX.Element;
   to: string;
+  path?: string;
 }
 export const RoutingTabs = ({
   data,
@@ -35,11 +36,11 @@ export const RoutingTabs = ({
       </Box>
       <Paper elevation={0} sx={{ pt: 1 }}>
         <Routes>
-          {data.map(({ to, element }, i) => {
+          {data.map(({ path, to, element }, i) => {
             return (
               <Route
                 key={i}
-                path={to}
+                path={path || to}
                 element={<WrapErrorBoundary>{element}</WrapErrorBoundary>}
               />
             );
