@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 
-import { WrapErrorBoundary } from "common";
+import { WrapErrorBoundary } from "layout";
 
 import { TabPanel } from "./panel";
 
