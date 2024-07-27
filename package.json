@@ -12,7 +12,9 @@
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "patch": "npm run build && npm version patch && npm publish"
+    "patch": "npm run build && npm version patch && npm publish",
+    "minor": "npm run build && npm version minor && npm publish",
+    "major": "npm run build && npm version major && npm publish"
   },
   "np": {
     "tests": false
