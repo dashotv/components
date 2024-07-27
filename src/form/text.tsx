@@ -2,7 +2,7 @@ import { Controller } from "react-hook-form";
 
 import { title } from "radash";
 
-import TextField from "@mui/material/TextField";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
 
 import { InputProps } from "./types";
 
@@ -11,9 +11,10 @@ export const Text = ({
   label,
   disabled,
   control,
+  placeholder,
   sx,
   onChange,
-}: InputProps) => {
+}: InputProps & TextFieldProps) => {
   //   error={!!errors[name]}
   //   helperText={errors[name]?.message}
   return (
@@ -28,6 +29,7 @@ export const Text = ({
           disabled={disabled}
           type="search"
           label={title(label || name)}
+          placeholder={placeholder}
           variant="standard"
           fullWidth
           autoComplete="off"

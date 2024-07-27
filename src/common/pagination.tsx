@@ -11,6 +11,7 @@ export const Pagination = ({
   page = 1,
   color = "primary",
   shape = "circular",
+  size = "small",
   onChange,
   ...props
 }: { total: number } & MUIPaginationProps) => {
@@ -29,6 +30,7 @@ export const Pagination = ({
         page={page}
         color={color}
         shape={shape}
+        size={size}
         onChange={onChange}
         {...props}
       />

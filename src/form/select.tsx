@@ -4,7 +4,7 @@ import { Controller } from "react-hook-form";
 import { title } from "radash";
 
 import MenuItem from "@mui/material/MenuItem";
-import TextField from "@mui/material/TextField";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
 
 import { InputProps, Option } from "./types";
 
@@ -21,9 +21,9 @@ export const Select = ({
   sx,
   render,
   onChange,
-}: InputProps & SelectProps) => {
+}: InputProps & SelectProps & TextFieldProps) => {
   const renderDefault = (option: Option) => (
-    <MenuItem key={option.value} value={option.value}>
+    <MenuItem key={option.value} value={option.value} sx={{ height: "36px" }}>
       <span>{render ? render(option) : option.label}</span>
     </MenuItem>
   );

@@ -12,3 +12,9 @@ type Story = StoryObj<typeof Pagination>;
 export const Default: Story = {
   render: () => <Pagination total={345} count={3} page={2} />,
 };
+export const Medium: Story = {
+  render: () => <Pagination total={345} count={3} page={2} size="medium" />,
+};
+export const Large: Story = {
+  render: () => <Pagination total={345} count={3} page={2} size="large" />,
+};
